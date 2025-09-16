@@ -26,7 +26,7 @@
 
 /* Private typedef -----------------------------------------------------------*/
 /* USER CODE BEGIN PTD */
-#define MAX_ITER 100
+#define MAX_ITER 250
 /* USER CODE END PTD */
 
 /* Private define ------------------------------------------------------------*/

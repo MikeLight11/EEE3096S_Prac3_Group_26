@@ -26,7 +26,7 @@
 
 /* Private typedef -----------------------------------------------------------*/
 /* USER CODE BEGIN PTD */
-
+#define MAX_ITER 250
 /* USER CODE END PTD */
 
 /* Private define ------------------------------------------------------------*/
@@ -43,8 +43,18 @@
 
 /* USER CODE BEGIN PV */
 //TODO: Define variables you think you might need
+uint32_t start_time;       // Clock time at start of operation
+uint32_t end_time;         // Clock time at end of operation
+uint32_t execution_time;   // Difference between start and end time
+uint64_t checksum;         // Sum returned by Mandelbrot function
+int init_width = 128;            // Initial height of 2D plane
+int init_height = 128;           // Initial width of 2D plane
+int size_array[] = {128, 160, 192, 224, 256};
+uint64_t checksum_array[5] = {0}; // Array to hold checksums for different sizes
+uint32_t execution_time_array[5] = {0}; // Array to hold execution times for different sizes
 // - Performance timing variables (e.g execution time, throughput, pixels per second, clock cycles)
-
+uint64_t calculate_mandelbrot_fixed_point_arithmetic(int width, int height, int max_iterations);
+uint64_t calculate_mandelbrot_double(int width, int height, int max_iterations);
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -92,6 +102,26 @@ int main(void)
   /* USER CODE BEGIN 2 */
 
   /* USER CODE END 2 */
+
+  for (int i = 0; i < 5; i++) {
+            //TODO: Turn on LED 0 to signify the start of the operation
+            HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0, GPIO_PIN_SET);
+
+            start_time = HAL_GetTick();
+            checksum_array[i] = calculate_mandelbrot_fixed_point_arithmetic(size_array[i], size_array[i], MAX_ITER);
+            //checksum_array[i] = calculate_mandelbrot_double(size_array[i], size_array[i], MAX_ITER);
+            end_time = HAL_GetTick();
+            execution_time_array[i] = end_time - start_time;
+
+            //TODO: Turn on LED 1 to signify the end of the operation
+            HAL_GPIO_WritePin(GPIOB, GPIO_PIN_1, GPIO_PIN_SET);
+
+            //TODO: Hold the LEDs on for a 1s delay
+            HAL_Delay(1000);
+
+            //TODO: Turn off the LEDs
+            HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0|GPIO_PIN_1, GPIO_PIN_RESET);
+        }
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
@@ -194,7 +224,58 @@ static void MX_GPIO_Init(void)
 
 /* USER CODE BEGIN 4 */
 //TODO: Function signatures you defined previously , implement them here
+uint64_t calculate_mandelbrot_fixed_point_arithmetic(int width, int height, int max_iterations){
+    const int SCALE = 1000;
+    const int THREE_FIVE = 3500;
+    const int TWO = 2000;
+    const int TWO_FIVE = 2500;
+    const int ONE = 1000;
+    const int FOUR = 4000;
 
+    checksum = 0;
+    for (int32_t y = 0; y < height; y++) {
+        for (int32_t x = 0; x < width; x++) {
+            int32_t x0 = ((int32_t)x * THREE_FIVE) / width - TWO_FIVE;
+            int32_t y0 = ((int32_t)y * TWO) / height - ONE;
+            int32_t xi = 0;
+            int32_t yi = 0;
+            int32_t iteration = 0;
+            while (((((int32_t)xi * xi + (int32_t)yi * yi) / SCALE) <= FOUR) && (iteration < max_iterations)) {
+                int32_t xi_temp = ((int32_t)xi * xi - (int32_t)yi * yi) / SCALE + x0;
+                int32_t yi_temp = ((int32_t)2 * xi * yi) / SCALE + y0;
+                xi = xi_temp;
+                yi = yi_temp;
+                iteration++;
+            }
+            checksum += iteration;
+        }
+    }
+    return checksum;
+}
+
+//TODO: Mandelbroat using variable type double
+uint64_t calculate_mandelbrot_double(int width, int height, int max_iterations){
+    //uint64_t mandelbrot_sum = 0;
+    //TODO: Complete the function implementation
+    checksum = 0;
+    for (int y = 0; y <= height-1; y++) {
+        for (int x = 0; x <= width-1; x++) {
+            double x0 = ((double)x/(double)width)*(3.5)-2.5;
+            double y0 = ((double)y/(double)height)*(2.0)-1.0;
+            int iteration = 0;
+            double xi = 0;
+            double yi = 0;
+            while ((xi*xi + yi*yi) <= (4) && iteration < max_iterations) {
+                double temp = (xi*xi - yi*yi);
+                yi = (2*xi*yi)+y0;
+                xi = temp+x0;
+                iteration++;
+            }
+            checksum += iteration;
+        }
+    }
+    return checksum;
+}
 /* USER CODE END 4 */
 
 /**
