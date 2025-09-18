@@ -28,7 +28,7 @@
 
 /* Private typedef -----------------------------------------------------------*/
 /* USER CODE BEGIN PTD */
-#define MAX_ITER 250
+#define MAX_ITER 100
 /* USER CODE END PTD */
 
 /* Private define ------------------------------------------------------------*/
@@ -72,7 +72,7 @@ static void MX_GPIO_Init(void);
 //TODO: Define any function prototypes you might need such as the calculate Mandelbrot function among others
 uint64_t calculate_mandelbrot_fixed_point_arithmetic(int width, int height, int max_iterations);
 uint64_t calculate_mandelbrot_double(int width, int height, int max_iterations);
-void Timer_Init(void);
+void TIM2_Init(void);
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/

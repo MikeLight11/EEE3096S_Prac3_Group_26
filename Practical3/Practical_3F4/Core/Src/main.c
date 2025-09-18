@@ -122,8 +122,8 @@ int main(void)
           DWT->CYCCNT = 0;
           start_cycles = DWT->CYCCNT;
 
-          //checksum_array[i] = calculate_mandelbrot_fixed_point_arithmetic(size_array[i], size_array[i], MAX_ITER);
-          checksum_array[i] = calculate_mandelbrot_double(size_array[i], size_array[i], MAX_ITER);
+          checksum_array[i] = calculate_mandelbrot_fixed_point_arithmetic(size_array[i], size_array[i], MAX_ITER);
+          //checksum_array[i] = calculate_mandelbrot_double(size_array[i], size_array[i], MAX_ITER);
           //checksum_array[i] = calculate_mandelbrot_float(size_array[i], size_array[i], MAX_ITER);
 
           end_time = HAL_GetTick();

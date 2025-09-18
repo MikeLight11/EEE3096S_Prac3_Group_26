@@ -25,6 +25,11 @@ DEBUG = 1
 # TODO:Compiler Optimisation levels
 # optimization
 OPT = -Og
+#OPT = -O1
+#OPT = -O2
+#OPT = -O3
+#OPT = -O0
+
 
 
 #######################################
@@ -97,12 +102,10 @@ CPU = -mcpu=cortex-m4
 
 #TODO: FPU Enbale/Disable
 # fpu
-#FPU = -mfpu=fpv4-sp-d16
-FPU = -mfloat-abi=soft
+FPU = -mfpu=fpv4-sp-d16
 
 # float-abi
-#FLOAT-ABI = -mfloat-abi=hard
-FLOAT-ABI = -mfloat-abi=soft
+FLOAT-ABI = -mfloat-abi=hard
 
 # mcu
 MCU = $(CPU) -mthumb $(FPU) $(FLOAT-ABI)
