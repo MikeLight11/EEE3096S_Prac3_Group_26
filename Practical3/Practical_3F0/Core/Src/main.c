@@ -18,7 +18,9 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
-
+#include <stdio.h>
+#include <sys/time.h>
+#include <time.h>
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 
@@ -47,14 +49,20 @@ uint32_t start_time;       // Clock time at start of operation
 uint32_t end_time;         // Clock time at end of operation
 uint32_t execution_time;   // Difference between start and end time
 uint64_t checksum;         // Sum returned by Mandelbrot function
+uint32_t start_cycles;     // Cycles at start of operation
+uint32_t end_cycles;       // Cycles at end of operation
+uint32_t CPU_cycles;       // Difference between start and end cycles
+uint32_t throughput;       // Pixel throughput
 int init_width = 128;            // Initial height of 2D plane
 int init_height = 128;           // Initial width of 2D plane
 int size_array[] = {128, 160, 192, 224, 256};
 uint64_t checksum_array[5] = {0}; // Array to hold checksums for different sizes
 uint32_t execution_time_array[5] = {0}; // Array to hold execution times for different sizes
+uint32_t CPU_cycles_array[5]={0};
+float CPU_time_array[5]={0};
+uint32_t throughput_array[5]={0};
 // - Performance timing variables (e.g execution time, throughput, pixels per second, clock cycles)
-uint64_t calculate_mandelbrot_fixed_point_arithmetic(int width, int height, int max_iterations);
-uint64_t calculate_mandelbrot_double(int width, int height, int max_iterations);
+
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -62,7 +70,9 @@ void SystemClock_Config(void);
 static void MX_GPIO_Init(void);
 /* USER CODE BEGIN PFP */
 //TODO: Define any function prototypes you might need such as the calculate Mandelbrot function among others
-
+uint64_t calculate_mandelbrot_fixed_point_arithmetic(int width, int height, int max_iterations);
+uint64_t calculate_mandelbrot_double(int width, int height, int max_iterations);
+void Timer_Init(void);
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
@@ -99,6 +109,7 @@ int main(void)
 
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
+  TIM2_Init();
   /* USER CODE BEGIN 2 */
 
   /* USER CODE END 2 */
@@ -108,10 +119,21 @@ int main(void)
             HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0, GPIO_PIN_SET);
 
             start_time = HAL_GetTick();
+
+            TIM2->CNT = 0;  // Reset counter
+            start_cycles = TIM2->CNT;
+
             checksum_array[i] = calculate_mandelbrot_fixed_point_arithmetic(size_array[i], size_array[i], MAX_ITER);
             //checksum_array[i] = calculate_mandelbrot_double(size_array[i], size_array[i], MAX_ITER);
             end_time = HAL_GetTick();
             execution_time_array[i] = end_time - start_time;
+
+            end_cycles = TIM2->CNT;
+
+            CPU_cycles_array[i] = end_cycles - start_cycles;
+            CPU_time_array[i] = CPU_cycles_array[i] / (48*(1e6));
+
+            throughput_array[i] = (size_array[i]*size_array[i]) / CPU_time_array[i];
 
             //TODO: Turn on LED 1 to signify the end of the operation
             HAL_GPIO_WritePin(GPIOB, GPIO_PIN_1, GPIO_PIN_SET);
@@ -276,6 +298,16 @@ uint64_t calculate_mandelbrot_double(int width, int height, int max_iterations){
     }
     return checksum;
 }
+
+void TIM2_Init(void){
+	__HAL_RCC_TIM2_CLK_ENABLE();
+
+	TIM2->PSC = 0;              // No prescaler = CPU frequency
+	TIM2->ARR = 0xFFFFFFFF;     // Maximum count before rollover
+	TIM2->CNT = 0;              // Start at zero
+	TIM2->CR1 |= TIM_CR1_CEN;   // Enable counter
+}
+
 /* USER CODE END 4 */
 
 /**
