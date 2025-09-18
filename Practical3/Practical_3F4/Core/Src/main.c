@@ -71,6 +71,7 @@ static void MX_GPIO_Init(void);
 //TODO: Define any function prototypes you might need such as the calculate Mandelbrot function among others
 uint64_t calculate_mandelbrot_fixed_point_arithmetic(int width, int height, int max_iterations);
 uint64_t calculate_mandelbrot_double(int width, int height, int max_iterations);
+uint64_t calculate_mandelbrot_float(int width, int height, int max_iterations);
 void DWT_Init(void);
 /* USER CODE END PFP */
 
@@ -121,8 +122,9 @@ int main(void)
           DWT->CYCCNT = 0;
           start_cycles = DWT->CYCCNT;
 
-          checksum_array[i] = calculate_mandelbrot_fixed_point_arithmetic(size_array[i], size_array[i], MAX_ITER);
-          //checksum_array[i] = calculate_mandelbrot_double(size_array[i], size_array[i], MAX_ITER);
+          //checksum_array[i] = calculate_mandelbrot_fixed_point_arithmetic(size_array[i], size_array[i], MAX_ITER);
+          checksum_array[i] = calculate_mandelbrot_double(size_array[i], size_array[i], MAX_ITER);
+          //checksum_array[i] = calculate_mandelbrot_float(size_array[i], size_array[i], MAX_ITER);
 
           end_time = HAL_GetTick();
           execution_time_array[i] = end_time - start_time;
@@ -292,6 +294,29 @@ uint64_t calculate_mandelbrot_double(int width, int height, int max_iterations){
             double yi = 0;
             while ((xi*xi + yi*yi) <= (4) && iteration < max_iterations) {
                 double temp = (xi*xi - yi*yi);
+                yi = (2*xi*yi)+y0;
+                xi = temp+x0;
+                iteration++;
+            }
+            checksum += iteration;
+        }
+    }
+    return checksum;
+}
+
+uint64_t calculate_mandelbrot_float(int width, int height, int max_iterations){
+    //uint64_t mandelbrot_sum = 0;
+    //TODO: Complete the function implementation
+    checksum = 0;
+    for (int y = 0; y <= height-1; y++) {
+        for (int x = 0; x <= width-1; x++) {
+            float x0 = ((float)x/(float)width)*(3.5)-2.5;
+            float y0 = ((float)y/(float)height)*(2.0)-1.0;
+            int iteration = 0;
+            float xi = 0;
+            float yi = 0;
+            while ((xi*xi + yi*yi) <= (4) && iteration < max_iterations) {
+                float temp = (xi*xi - yi*yi);
                 yi = (2*xi*yi)+y0;
                 xi = temp+x0;
                 iteration++;

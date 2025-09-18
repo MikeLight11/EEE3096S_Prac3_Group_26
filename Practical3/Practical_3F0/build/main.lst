@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccE2Q5sy.s 			page 1
+ARM GAS  C:\Users\User\AppData\Local\Temp\cc4VAsDi.s 			page 1
 
 
    1              		.cpu cortex-m0
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccE2Q5sy.s 			page 1
   31:Core/Src/main.c **** #define MAX_ITER 250
   32:Core/Src/main.c **** /* USER CODE END PTD */
   33:Core/Src/main.c **** 
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccE2Q5sy.s 			page 2
+ARM GAS  C:\Users\User\AppData\Local\Temp\cc4VAsDi.s 			page 2
 
 
   34:Core/Src/main.c **** /* Private define ------------------------------------------------------------*/
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccE2Q5sy.s 			page 1
   88:Core/Src/main.c **** {
   89:Core/Src/main.c **** 
   90:Core/Src/main.c ****   /* USER CODE BEGIN 1 */
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccE2Q5sy.s 			page 3
+ARM GAS  C:\Users\User\AppData\Local\Temp\cc4VAsDi.s 			page 3
 
 
   91:Core/Src/main.c **** 
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccE2Q5sy.s 			page 1
  145:Core/Src/main.c ****             HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0|GPIO_PIN_1, GPIO_PIN_RESET);
  146:Core/Src/main.c ****         }
  147:Core/Src/main.c **** 
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccE2Q5sy.s 			page 4
+ARM GAS  C:\Users\User\AppData\Local\Temp\cc4VAsDi.s 			page 4
 
 
  148:Core/Src/main.c ****   /* Infinite loop */
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccE2Q5sy.s 			page 1
  202:Core/Src/main.c ****   RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_PLLCLK;
  203:Core/Src/main.c ****   RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
  204:Core/Src/main.c ****   RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV1;
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccE2Q5sy.s 			page 5
+ARM GAS  C:\Users\User\AppData\Local\Temp\cc4VAsDi.s 			page 5
 
 
  205:Core/Src/main.c **** 
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccE2Q5sy.s 			page 1
   59              		.loc 1 225 3 view .LVU7
   60 0020 009A     		ldr	r2, [sp]
   61              	.LBE4:
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccE2Q5sy.s 			page 6
+ARM GAS  C:\Users\User\AppData\Local\Temp\cc4VAsDi.s 			page 6
 
 
   62              		.loc 1 225 3 view .LVU8
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccE2Q5sy.s 			page 1
  106 0052 FF23     		movs	r3, #255
  107 0054 0393     		str	r3, [sp, #12]
  236:Core/Src/main.c ****                           |GPIO_PIN_4|GPIO_PIN_5|GPIO_PIN_6|GPIO_PIN_7;
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccE2Q5sy.s 			page 7
+ARM GAS  C:\Users\User\AppData\Local\Temp\cc4VAsDi.s 			page 7
 
 
  237:Core/Src/main.c ****   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccE2Q5sy.s 			page 1
  151              		.loc 1 249 96 is_stmt 0 view .LVU33
  152 0000 F0B5     		push	{r4, r5, r6, r7, lr}
  153              	.LCFI2:
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccE2Q5sy.s 			page 8
+ARM GAS  C:\Users\User\AppData\Local\Temp\cc4VAsDi.s 			page 8
 
 
  154              		.cfi_def_cfa_offset 20
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccE2Q5sy.s 			page 1
  199              		.loc 1 258 18 is_stmt 0 view .LVU46
  200 001e 0023     		movs	r3, #0
  201 0020 0493     		str	r3, [sp, #16]
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccE2Q5sy.s 			page 9
+ARM GAS  C:\Users\User\AppData\Local\Temp\cc4VAsDi.s 			page 9
 
 
  202              		.loc 1 258 5 view .LVU47
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccE2Q5sy.s 			page 1
  243 0044 5446     		mov	r4, r10
  244              	.LVL15:
  245              	.L6:
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccE2Q5sy.s 			page 10
+ARM GAS  C:\Users\User\AppData\Local\Temp\cc4VAsDi.s 			page 10
 
 
  268:Core/Src/main.c ****                 xi = xi_temp;
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccE2Q5sy.s 			page 1
  259:Core/Src/main.c ****             int32_t x0 = ((int32_t)x * THREE_FIVE) / width - TWO_FIVE;
  290              		.loc 1 259 31 discriminator 1 view .LVU74
  291 007a 039B     		ldr	r3, [sp, #12]
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccE2Q5sy.s 			page 11
+ARM GAS  C:\Users\User\AppData\Local\Temp\cc4VAsDi.s 			page 11
 
 
  292 007c 9B45     		cmp	fp, r3
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccE2Q5sy.s 			page 1
  263:Core/Src/main.c ****             int32_t iteration = 0;
  333              		.loc 1 263 21 view .LVU88
  334 00ae 0025     		movs	r5, #0
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccE2Q5sy.s 			page 12
+ARM GAS  C:\Users\User\AppData\Local\Temp\cc4VAsDi.s 			page 12
 
 
  262:Core/Src/main.c ****             int32_t yi = 0;
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccE2Q5sy.s 			page 1
  378 00d2 F0BC     		pop	{r4, r5, r6, r7}
  379 00d4 BB46     		mov	fp, r7
  380 00d6 B246     		mov	r10, r6
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccE2Q5sy.s 			page 13
+ARM GAS  C:\Users\User\AppData\Local\Temp\cc4VAsDi.s 			page 13
 
 
  381 00d8 A946     		mov	r9, r5
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccE2Q5sy.s 			page 1
  434              		.cfi_offset 11, -24
  435 000c 8FB0     		sub	sp, sp, #60
  436              	.LCFI7:
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccE2Q5sy.s 			page 14
+ARM GAS  C:\Users\User\AppData\Local\Temp\cc4VAsDi.s 			page 14
 
 
  437              		.cfi_def_cfa_offset 96
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccE2Q5sy.s 			page 1
  478              		.loc 1 292 24 is_stmt 0 view .LVU114
  479 0034 3200     		movs	r2, r6
  480 0036 3B00     		movs	r3, r7
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccE2Q5sy.s 			page 15
+ARM GAS  C:\Users\User\AppData\Local\Temp\cc4VAsDi.s 			page 15
 
 
  481 0038 3000     		movs	r0, r6
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccE2Q5sy.s 			page 1
  531              	.LVL44:
  532 0076 0090     		str	r0, [sp]
  533 0078 0191     		str	r1, [sp, #4]
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccE2Q5sy.s 			page 16
+ARM GAS  C:\Users\User\AppData\Local\Temp\cc4VAsDi.s 			page 16
 
 
  290:Core/Src/main.c ****                 double temp = (xi*xi - yi*yi);
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccE2Q5sy.s 			page 1
  581 00c2 0133     		adds	r3, r3, #1
  582 00c4 0A93     		str	r3, [sp, #40]
  583              	.LVL49:
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccE2Q5sy.s 			page 17
+ARM GAS  C:\Users\User\AppData\Local\Temp\cc4VAsDi.s 			page 17
 
 
  584              	.L23:
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccE2Q5sy.s 			page 1
  628              	.LVL57:
  629 0104 0400     		movs	r4, r0
  630 0106 0D00     		movs	r5, r1
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccE2Q5sy.s 			page 18
+ARM GAS  C:\Users\User\AppData\Local\Temp\cc4VAsDi.s 			page 18
 
 
  286:Core/Src/main.c ****             int iteration = 0;
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccE2Q5sy.s 			page 1
  672              		.loc 1 290 19 view .LVU157
  673              	.LBE17:
  674              	.LBE14:
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccE2Q5sy.s 			page 19
+ARM GAS  C:\Users\User\AppData\Local\Temp\cc4VAsDi.s 			page 19
 
 
  283:Core/Src/main.c ****         for (int x = 0; x <= width-1; x++) {
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccE2Q5sy.s 			page 1
  720 016c A046     		mov	r8, r4
  721 016e F0BD     		pop	{r4, r5, r6, r7, pc}
  722              	.L29:
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccE2Q5sy.s 			page 20
+ARM GAS  C:\Users\User\AppData\Local\Temp\cc4VAsDi.s 			page 20
 
 
  723              		.align	2
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccE2Q5sy.s 			page 1
  773              		.loc 1 306 2 is_stmt 1 view .LVU177
  774              		.loc 1 306 12 is_stmt 0 view .LVU178
  775 001c 0120     		movs	r0, #1
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccE2Q5sy.s 			page 21
+ARM GAS  C:\Users\User\AppData\Local\Temp\cc4VAsDi.s 			page 21
 
 
  776 001e 4042     		rsbs	r0, r0, #0
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccE2Q5sy.s 			page 1
    1:Drivers/CMSIS/Include/cmsis_gcc.h **** /**************************************************************************//**
    2:Drivers/CMSIS/Include/cmsis_gcc.h ****  * @file     cmsis_gcc.h
    3:Drivers/CMSIS/Include/cmsis_gcc.h ****  * @brief    CMSIS compiler GCC header file
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccE2Q5sy.s 			page 22
+ARM GAS  C:\Users\User\AppData\Local\Temp\cc4VAsDi.s 			page 22
 
 
    4:Drivers/CMSIS/Include/cmsis_gcc.h ****  * @version  V5.0.4
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccE2Q5sy.s 			page 1
   58:Drivers/CMSIS/Include/cmsis_gcc.h **** #ifndef   __WEAK
   59:Drivers/CMSIS/Include/cmsis_gcc.h ****   #define __WEAK                                 __attribute__((weak))
   60:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccE2Q5sy.s 			page 23
+ARM GAS  C:\Users\User\AppData\Local\Temp\cc4VAsDi.s 			page 23
 
 
   61:Drivers/CMSIS/Include/cmsis_gcc.h **** #ifndef   __PACKED
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccE2Q5sy.s 			page 1
  115:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
  116:Drivers/CMSIS/Include/cmsis_gcc.h **** 
  117:Drivers/CMSIS/Include/cmsis_gcc.h **** 
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccE2Q5sy.s 			page 24
+ARM GAS  C:\Users\User\AppData\Local\Temp\cc4VAsDi.s 			page 24
 
 
  118:Drivers/CMSIS/Include/cmsis_gcc.h **** /* ###########################  Core Function Access  ########################### */
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccE2Q5sy.s 			page 1
  844              	.LFB66:
  179:Core/Src/main.c ****   RCC_OscInitTypeDef RCC_OscInitStruct = {0};
  845              		.loc 1 179 1 view -0
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccE2Q5sy.s 			page 25
+ARM GAS  C:\Users\User\AppData\Local\Temp\cc4VAsDi.s 			page 25
 
 
  846              		.cfi_startproc
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccE2Q5sy.s 			page 1
  886              		.loc 1 191 3 view .LVU206
  191:Core/Src/main.c ****   RCC_OscInitStruct.PLL.PREDIV = RCC_PREDIV_DIV1;
  887              		.loc 1 191 32 is_stmt 0 view .LVU207
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccE2Q5sy.s 			page 26
+ARM GAS  C:\Users\User\AppData\Local\Temp\cc4VAsDi.s 			page 26
 
 
  888 0026 A023     		movs	r3, #160
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccE2Q5sy.s 			page 1
  926              		@ sp needed
  927 0052 00BD     		pop	{pc}
  928              	.L38:
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccE2Q5sy.s 			page 27
+ARM GAS  C:\Users\User\AppData\Local\Temp\cc4VAsDi.s 			page 27
 
 
  195:Core/Src/main.c ****   }
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccE2Q5sy.s 			page 1
  111:Core/Src/main.c ****   TIM2_Init();
  980              		.loc 1 111 3 view .LVU229
  981 0012 FFF7FEFF 		bl	MX_GPIO_Init
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccE2Q5sy.s 			page 28
+ARM GAS  C:\Users\User\AppData\Local\Temp\cc4VAsDi.s 			page 28
 
 
  982              	.LVL77:
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccE2Q5sy.s 			page 1
  1022 0042 264A     		ldr	r2, .L44+8
  1023 0044 9146     		mov	r9, r2
  1024 0046 1360     		str	r3, [r2]
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccE2Q5sy.s 			page 29
+ARM GAS  C:\Users\User\AppData\Local\Temp\cc4VAsDi.s 			page 29
 
 
  126:Core/Src/main.c ****             //checksum_array[i] = calculate_mandelbrot_double(size_array[i], size_array[i], MAX_ITE
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccE2Q5sy.s 			page 1
  1065 007c 1B68     		ldr	r3, [r3]
  1066 007e C01A     		subs	r0, r0, r3
  133:Core/Src/main.c ****             CPU_time_array[i] = CPU_cycles_array[i] / (48*(1e6));
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccE2Q5sy.s 			page 30
+ARM GAS  C:\Users\User\AppData\Local\Temp\cc4VAsDi.s 			page 30
 
 
  1067              		.loc 1 133 33 view .LVU258
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccE2Q5sy.s 			page 1
  145:Core/Src/main.c ****         }
  1111              		.loc 1 145 13 view .LVU269
  1112 00c2 0022     		movs	r2, #0
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccE2Q5sy.s 			page 31
+ARM GAS  C:\Users\User\AppData\Local\Temp\cc4VAsDi.s 			page 31
 
 
  1113 00c4 0321     		movs	r1, #3
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccE2Q5sy.s 			page 1
  1161      00000000 
  1161      00000000 
  1161      00000000 
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccE2Q5sy.s 			page 32
+ARM GAS  C:\Users\User\AppData\Local\Temp\cc4VAsDi.s 			page 32
 
 
  1162              		.global	CPU_cycles_array
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccE2Q5sy.s 			page 1
  1220              	CPU_cycles:
  1221 0000 00000000 		.space	4
  1222              		.global	end_cycles
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccE2Q5sy.s 			page 33
+ARM GAS  C:\Users\User\AppData\Local\Temp\cc4VAsDi.s 			page 33
 
 
  1223              		.section	.bss.end_cycles,"aw",%nobits
@@ -1961,67 +1961,67 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccE2Q5sy.s 			page 1
  1271              		.file 8 "Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_gpio.h"
  1272              		.file 9 "Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h"
  1273              		.file 10 "<built-in>"
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccE2Q5sy.s 			page 34
+ARM GAS  C:\Users\User\AppData\Local\Temp\cc4VAsDi.s 			page 34
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 main.c
-C:\Users\User\AppData\Local\Temp\ccE2Q5sy.s:19     .text.MX_GPIO_Init:00000000 $t
-C:\Users\User\AppData\Local\Temp\ccE2Q5sy.s:24     .text.MX_GPIO_Init:00000000 MX_GPIO_Init
-C:\Users\User\AppData\Local\Temp\ccE2Q5sy.s:131    .text.MX_GPIO_Init:0000006c $d
-C:\Users\User\AppData\Local\Temp\ccE2Q5sy.s:138    .text.calculate_mandelbrot_fixed_point_arithmetic:00000000 $t
-C:\Users\User\AppData\Local\Temp\ccE2Q5sy.s:144    .text.calculate_mandelbrot_fixed_point_arithmetic:00000000 calculate_mandelbrot_fixed_point_arithmetic
-C:\Users\User\AppData\Local\Temp\ccE2Q5sy.s:387    .text.calculate_mandelbrot_fixed_point_arithmetic:000000e0 $d
-C:\Users\User\AppData\Local\Temp\ccE2Q5sy.s:1241   .bss.checksum:00000000 checksum
-C:\Users\User\AppData\Local\Temp\ccE2Q5sy.s:402    .text.calculate_mandelbrot_double:00000000 $t
-C:\Users\User\AppData\Local\Temp\ccE2Q5sy.s:408    .text.calculate_mandelbrot_double:00000000 calculate_mandelbrot_double
-C:\Users\User\AppData\Local\Temp\ccE2Q5sy.s:725    .text.calculate_mandelbrot_double:00000170 $d
-C:\Users\User\AppData\Local\Temp\ccE2Q5sy.s:734    .text.TIM2_Init:00000000 $t
-C:\Users\User\AppData\Local\Temp\ccE2Q5sy.s:740    .text.TIM2_Init:00000000 TIM2_Init
-C:\Users\User\AppData\Local\Temp\ccE2Q5sy.s:794    .text.TIM2_Init:00000030 $d
-C:\Users\User\AppData\Local\Temp\ccE2Q5sy.s:799    .text.Error_Handler:00000000 $t
-C:\Users\User\AppData\Local\Temp\ccE2Q5sy.s:805    .text.Error_Handler:00000000 Error_Handler
-C:\Users\User\AppData\Local\Temp\ccE2Q5sy.s:837    .text.SystemClock_Config:00000000 $t
-C:\Users\User\AppData\Local\Temp\ccE2Q5sy.s:843    .text.SystemClock_Config:00000000 SystemClock_Config
-C:\Users\User\AppData\Local\Temp\ccE2Q5sy.s:945    .text.main:00000000 $t
-C:\Users\User\AppData\Local\Temp\ccE2Q5sy.s:951    .text.main:00000000 main
-C:\Users\User\AppData\Local\Temp\ccE2Q5sy.s:1133   .text.main:000000d4 $d
-C:\Users\User\AppData\Local\Temp\ccE2Q5sy.s:1262   .bss.start_time:00000000 start_time
-C:\Users\User\AppData\Local\Temp\ccE2Q5sy.s:1234   .bss.start_cycles:00000000 start_cycles
-C:\Users\User\AppData\Local\Temp\ccE2Q5sy.s:1188   .data.size_array:00000000 size_array
-C:\Users\User\AppData\Local\Temp\ccE2Q5sy.s:1181   .bss.checksum_array:00000000 checksum_array
-C:\Users\User\AppData\Local\Temp\ccE2Q5sy.s:1255   .bss.end_time:00000000 end_time
-C:\Users\User\AppData\Local\Temp\ccE2Q5sy.s:1174   .bss.execution_time_array:00000000 execution_time_array
-C:\Users\User\AppData\Local\Temp\ccE2Q5sy.s:1227   .bss.end_cycles:00000000 end_cycles
-C:\Users\User\AppData\Local\Temp\ccE2Q5sy.s:1167   .bss.CPU_cycles_array:00000000 CPU_cycles_array
-C:\Users\User\AppData\Local\Temp\ccE2Q5sy.s:1160   .bss.CPU_time_array:00000000 CPU_time_array
-C:\Users\User\AppData\Local\Temp\ccE2Q5sy.s:1153   .bss.throughput_array:00000000 throughput_array
-C:\Users\User\AppData\Local\Temp\ccE2Q5sy.s:1150   .bss.throughput_array:00000000 $d
-C:\Users\User\AppData\Local\Temp\ccE2Q5sy.s:1157   .bss.CPU_time_array:00000000 $d
-C:\Users\User\AppData\Local\Temp\ccE2Q5sy.s:1164   .bss.CPU_cycles_array:00000000 $d
-C:\Users\User\AppData\Local\Temp\ccE2Q5sy.s:1171   .bss.execution_time_array:00000000 $d
-C:\Users\User\AppData\Local\Temp\ccE2Q5sy.s:1178   .bss.checksum_array:00000000 $d
-C:\Users\User\AppData\Local\Temp\ccE2Q5sy.s:1185   .data.size_array:00000000 $d
-C:\Users\User\AppData\Local\Temp\ccE2Q5sy.s:1199   .data.init_height:00000000 init_height
-C:\Users\User\AppData\Local\Temp\ccE2Q5sy.s:1196   .data.init_height:00000000 $d
-C:\Users\User\AppData\Local\Temp\ccE2Q5sy.s:1206   .data.init_width:00000000 init_width
-C:\Users\User\AppData\Local\Temp\ccE2Q5sy.s:1203   .data.init_width:00000000 $d
-C:\Users\User\AppData\Local\Temp\ccE2Q5sy.s:1213   .bss.throughput:00000000 throughput
-C:\Users\User\AppData\Local\Temp\ccE2Q5sy.s:1210   .bss.throughput:00000000 $d
-C:\Users\User\AppData\Local\Temp\ccE2Q5sy.s:1220   .bss.CPU_cycles:00000000 CPU_cycles
-C:\Users\User\AppData\Local\Temp\ccE2Q5sy.s:1217   .bss.CPU_cycles:00000000 $d
-C:\Users\User\AppData\Local\Temp\ccE2Q5sy.s:1224   .bss.end_cycles:00000000 $d
-C:\Users\User\AppData\Local\Temp\ccE2Q5sy.s:1231   .bss.start_cycles:00000000 $d
-C:\Users\User\AppData\Local\Temp\ccE2Q5sy.s:1238   .bss.checksum:00000000 $d
-C:\Users\User\AppData\Local\Temp\ccE2Q5sy.s:1248   .bss.execution_time:00000000 execution_time
-C:\Users\User\AppData\Local\Temp\ccE2Q5sy.s:1245   .bss.execution_time:00000000 $d
-C:\Users\User\AppData\Local\Temp\ccE2Q5sy.s:1252   .bss.end_time:00000000 $d
-C:\Users\User\AppData\Local\Temp\ccE2Q5sy.s:1259   .bss.start_time:00000000 $d
+C:\Users\User\AppData\Local\Temp\cc4VAsDi.s:19     .text.MX_GPIO_Init:00000000 $t
+C:\Users\User\AppData\Local\Temp\cc4VAsDi.s:24     .text.MX_GPIO_Init:00000000 MX_GPIO_Init
+C:\Users\User\AppData\Local\Temp\cc4VAsDi.s:131    .text.MX_GPIO_Init:0000006c $d
+C:\Users\User\AppData\Local\Temp\cc4VAsDi.s:138    .text.calculate_mandelbrot_fixed_point_arithmetic:00000000 $t
+C:\Users\User\AppData\Local\Temp\cc4VAsDi.s:144    .text.calculate_mandelbrot_fixed_point_arithmetic:00000000 calculate_mandelbrot_fixed_point_arithmetic
+C:\Users\User\AppData\Local\Temp\cc4VAsDi.s:387    .text.calculate_mandelbrot_fixed_point_arithmetic:000000e0 $d
+C:\Users\User\AppData\Local\Temp\cc4VAsDi.s:1241   .bss.checksum:00000000 checksum
+C:\Users\User\AppData\Local\Temp\cc4VAsDi.s:402    .text.calculate_mandelbrot_double:00000000 $t
+C:\Users\User\AppData\Local\Temp\cc4VAsDi.s:408    .text.calculate_mandelbrot_double:00000000 calculate_mandelbrot_double
+C:\Users\User\AppData\Local\Temp\cc4VAsDi.s:725    .text.calculate_mandelbrot_double:00000170 $d
+C:\Users\User\AppData\Local\Temp\cc4VAsDi.s:734    .text.TIM2_Init:00000000 $t
+C:\Users\User\AppData\Local\Temp\cc4VAsDi.s:740    .text.TIM2_Init:00000000 TIM2_Init
+C:\Users\User\AppData\Local\Temp\cc4VAsDi.s:794    .text.TIM2_Init:00000030 $d
+C:\Users\User\AppData\Local\Temp\cc4VAsDi.s:799    .text.Error_Handler:00000000 $t
+C:\Users\User\AppData\Local\Temp\cc4VAsDi.s:805    .text.Error_Handler:00000000 Error_Handler
+C:\Users\User\AppData\Local\Temp\cc4VAsDi.s:837    .text.SystemClock_Config:00000000 $t
+C:\Users\User\AppData\Local\Temp\cc4VAsDi.s:843    .text.SystemClock_Config:00000000 SystemClock_Config
+C:\Users\User\AppData\Local\Temp\cc4VAsDi.s:945    .text.main:00000000 $t
+C:\Users\User\AppData\Local\Temp\cc4VAsDi.s:951    .text.main:00000000 main
+C:\Users\User\AppData\Local\Temp\cc4VAsDi.s:1133   .text.main:000000d4 $d
+C:\Users\User\AppData\Local\Temp\cc4VAsDi.s:1262   .bss.start_time:00000000 start_time
+C:\Users\User\AppData\Local\Temp\cc4VAsDi.s:1234   .bss.start_cycles:00000000 start_cycles
+C:\Users\User\AppData\Local\Temp\cc4VAsDi.s:1188   .data.size_array:00000000 size_array
+C:\Users\User\AppData\Local\Temp\cc4VAsDi.s:1181   .bss.checksum_array:00000000 checksum_array
+C:\Users\User\AppData\Local\Temp\cc4VAsDi.s:1255   .bss.end_time:00000000 end_time
+C:\Users\User\AppData\Local\Temp\cc4VAsDi.s:1174   .bss.execution_time_array:00000000 execution_time_array
+C:\Users\User\AppData\Local\Temp\cc4VAsDi.s:1227   .bss.end_cycles:00000000 end_cycles
+C:\Users\User\AppData\Local\Temp\cc4VAsDi.s:1167   .bss.CPU_cycles_array:00000000 CPU_cycles_array
+C:\Users\User\AppData\Local\Temp\cc4VAsDi.s:1160   .bss.CPU_time_array:00000000 CPU_time_array
+C:\Users\User\AppData\Local\Temp\cc4VAsDi.s:1153   .bss.throughput_array:00000000 throughput_array
+C:\Users\User\AppData\Local\Temp\cc4VAsDi.s:1150   .bss.throughput_array:00000000 $d
+C:\Users\User\AppData\Local\Temp\cc4VAsDi.s:1157   .bss.CPU_time_array:00000000 $d
+C:\Users\User\AppData\Local\Temp\cc4VAsDi.s:1164   .bss.CPU_cycles_array:00000000 $d
+C:\Users\User\AppData\Local\Temp\cc4VAsDi.s:1171   .bss.execution_time_array:00000000 $d
+C:\Users\User\AppData\Local\Temp\cc4VAsDi.s:1178   .bss.checksum_array:00000000 $d
+C:\Users\User\AppData\Local\Temp\cc4VAsDi.s:1185   .data.size_array:00000000 $d
+C:\Users\User\AppData\Local\Temp\cc4VAsDi.s:1199   .data.init_height:00000000 init_height
+C:\Users\User\AppData\Local\Temp\cc4VAsDi.s:1196   .data.init_height:00000000 $d
+C:\Users\User\AppData\Local\Temp\cc4VAsDi.s:1206   .data.init_width:00000000 init_width
+C:\Users\User\AppData\Local\Temp\cc4VAsDi.s:1203   .data.init_width:00000000 $d
+C:\Users\User\AppData\Local\Temp\cc4VAsDi.s:1213   .bss.throughput:00000000 throughput
+C:\Users\User\AppData\Local\Temp\cc4VAsDi.s:1210   .bss.throughput:00000000 $d
+C:\Users\User\AppData\Local\Temp\cc4VAsDi.s:1220   .bss.CPU_cycles:00000000 CPU_cycles
+C:\Users\User\AppData\Local\Temp\cc4VAsDi.s:1217   .bss.CPU_cycles:00000000 $d
+C:\Users\User\AppData\Local\Temp\cc4VAsDi.s:1224   .bss.end_cycles:00000000 $d
+C:\Users\User\AppData\Local\Temp\cc4VAsDi.s:1231   .bss.start_cycles:00000000 $d
+C:\Users\User\AppData\Local\Temp\cc4VAsDi.s:1238   .bss.checksum:00000000 $d
+C:\Users\User\AppData\Local\Temp\cc4VAsDi.s:1248   .bss.execution_time:00000000 execution_time
+C:\Users\User\AppData\Local\Temp\cc4VAsDi.s:1245   .bss.execution_time:00000000 $d
+C:\Users\User\AppData\Local\Temp\cc4VAsDi.s:1252   .bss.end_time:00000000 $d
+C:\Users\User\AppData\Local\Temp\cc4VAsDi.s:1259   .bss.start_time:00000000 $d
 
 UNDEFINED SYMBOLS
 memset
 HAL_GPIO_WritePin
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccE2Q5sy.s 			page 35
+ARM GAS  C:\Users\User\AppData\Local\Temp\cc4VAsDi.s 			page 35
 
 
 HAL_GPIO_Init
