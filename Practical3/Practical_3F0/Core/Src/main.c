@@ -247,7 +247,9 @@ static void MX_GPIO_Init(void)
 /* USER CODE BEGIN 4 */
 //TODO: Function signatures you defined previously , implement them here
 uint64_t calculate_mandelbrot_fixed_point_arithmetic(int width, int height, int max_iterations){
-    const int SCALE = 1000;
+    //const int SCALE = 1000;
+    const int SCALE = 10000;
+	//const int SCALE = 100000;
     const int THREE_FIVE = 3500;
     const int TWO = 2000;
     const int TWO_FIVE = 2500;
