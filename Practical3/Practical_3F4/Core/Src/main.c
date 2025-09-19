@@ -18,6 +18,7 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
+#include <math.h>
 #include <stdio.h>
 #include <sys/time.h>
 #include <time.h>
@@ -62,6 +63,12 @@ uint32_t execution_time_array[5] = {0}; // Array to hold execution times for dif
 uint32_t CPU_cycles_array[5]={0};
 float CPU_time_array[5]={0};
 uint32_t throughput_array[5]={0};
+
+int size_array_task4[] = {128, 160, 192, 224, 256, 320, 384, 448, 512, 640, 768, 896, 1024, 1152, 1280, 1440, 1600, 1792, 1920};
+int hd_widths[] = {1280, 1600, 1920};
+int hd_heights[] = {720, 900, 1080};
+uint64_t checksum_array_task4[19] = {0}; // Array to hold checksums for different sizes
+uint32_t execution_time_array_task4[19] = {0}; // Array to hold execution times for different sizes
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -71,6 +78,7 @@ static void MX_GPIO_Init(void);
 //TODO: Define any function prototypes you might need such as the calculate Mandelbrot function among others
 uint64_t calculate_mandelbrot_fixed_point_arithmetic(int width, int height, int max_iterations);
 uint64_t calculate_mandelbrot_double(int width, int height, int max_iterations);
+uint64_t calculate_mandelbrot_double_task4(int width, int height, int max_iterations, int row_offset, int total_height);
 uint64_t calculate_mandelbrot_float(int width, int height, int max_iterations);
 void DWT_Init(void);
 /* USER CODE END PFP */
@@ -112,38 +120,93 @@ int main(void)
   DWT_Init();
   /* USER CODE BEGIN 2 */
 
-  /* USER CODE END 2 */
-  for (int i = 0; i < 5; i++) {
-          //TODO: Turn on LED 0 to signify the start of the operation
-          HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0, GPIO_PIN_SET);
+  // Task 4: Scalability Test - Progressive size increase
+   for (int i = 0; i < 19; i++) {
+       // Turn on LED 0 to signify start of operation
+       HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0, GPIO_PIN_SET);
 
-          start_time = HAL_GetTick();
+       start_time = HAL_GetTick();
 
-          DWT->CYCCNT = 0;
-          start_cycles = DWT->CYCCNT;
+      //  int iterations = (int)ceil((double)size_array_task4[i] / MAX_IMG_SIZE);
+      //  int checksum_total = 0;
 
-          //checksum_array[i] = calculate_mandelbrot_fixed_point_arithmetic(size_array[i], size_array[i], MAX_ITER);
-          checksum_array[i] = calculate_mandelbrot_double(size_array[i], size_array[i], MAX_ITER);
-          //checksum_array[i] = calculate_mandelbrot_float(size_array[i], size_array[i], MAX_ITER);
+      //  for (int j = 0; j < iterations; j++) {
+      //       int size = MAX_IMG_SIZE;
+      //       if (j == iterations - 1) {
+      //           size = size_array_task4[i] - j * MAX_IMG_SIZE; // Last chunk may be smaller
+      //       } else {
+      //           size = j * MAX_IMG_SIZE - (j-1) * MAX_IMG_SIZE;
+      //       }
+      //       checksum_total += calculate_mandelbrot_double(size, size, MAX_ITER);
+      //   }
+      //  checksum_array_task4[i] = checksum_total;
 
-          end_time = HAL_GetTick();
-          execution_time_array[i] = end_time - start_time;
+       int checksum_total = 0;
+       int rows_count = size_array_task4[i];
+       int row_off = 0;
 
-          end_cycles = DWT->CYCCNT;
-          CPU_cycles_array[i] = end_cycles - start_cycles;
-          CPU_time_array[i] = CPU_cycles_array[i] / (120*(1e6));
+       while (rows_count > 0) {
+           int part_height;
+           if (rows_count > MAX_IMG_SIZE) {
+               part_height = MAX_IMG_SIZE;
+           } else {
+               part_height = rows_count;
+           }
 
-          throughput_array[i] = (size_array[i]*size_array[i]) / CPU_time_array[i];
+           checksum_total += calculate_mandelbrot_double(size_array_task4[i], part_height, MAX_ITER, row_off, size_array_task4[i]);
+           rows_count -= part_height;
+           row_off += part_height;
+       }
+       checksum_array_task4[i] = checksum_total;
 
-          //TODO: Turn on LED 1 to signify the end of the operation
-          HAL_GPIO_WritePin(GPIOB, GPIO_PIN_1, GPIO_PIN_SET);
+       end_time = HAL_GetTick();
+       execution_time_array_task4[i] = end_time - start_time;
 
-          //TODO: Hold the LEDs on for a 1s delay
-          HAL_Delay(1000);
+       // Turn on LED 1 to signify end of operation
+       HAL_GPIO_WritePin(GPIOB, GPIO_PIN_1, GPIO_PIN_SET);
 
-          //TODO: Turn off the LEDs
-          HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0|GPIO_PIN_1, GPIO_PIN_RESET);
-      }
+       // Hold LEDs on for 1s delay
+       HAL_Delay(1000);
+
+       // Turn off LEDs
+       HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0|GPIO_PIN_1, GPIO_PIN_RESET);
+
+       // Small delay between tests
+       HAL_Delay(500);
+   }
+
+  // /* USER CODE END 2 */
+  // for (int i = 0; i < 5; i++) {
+  //         //TODO: Turn on LED 0 to signify the start of the operation
+  //         HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0, GPIO_PIN_SET);
+
+  //         start_time = HAL_GetTick();
+
+  //         DWT->CYCCNT = 0;
+  //         start_cycles = DWT->CYCCNT;
+
+  //         //checksum_array[i] = calculate_mandelbrot_fixed_point_arithmetic(size_array[i], size_array[i], MAX_ITER);
+  //         checksum_array[i] = calculate_mandelbrot_double(size_array[i], size_array[i], MAX_ITER);
+  //         //checksum_array[i] = calculate_mandelbrot_float(size_array[i], size_array[i], MAX_ITER);
+
+  //         end_time = HAL_GetTick();
+  //         execution_time_array[i] = end_time - start_time;
+
+  //         end_cycles = DWT->CYCCNT;
+  //         CPU_cycles_array[i] = end_cycles - start_cycles;
+  //         CPU_time_array[i] = CPU_cycles_array[i] / (120*(1e6));
+
+  //         throughput_array[i] = (size_array[i]*size_array[i]) / CPU_time_array[i];
+
+  //         //TODO: Turn on LED 1 to signify the end of the operation
+  //         HAL_GPIO_WritePin(GPIOB, GPIO_PIN_1, GPIO_PIN_SET);
+
+  //         //TODO: Hold the LEDs on for a 1s delay
+  //         HAL_Delay(1000);
+
+  //         //TODO: Turn off the LEDs
+  //         HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0|GPIO_PIN_1, GPIO_PIN_RESET);
+  //     }
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
@@ -319,6 +382,31 @@ uint64_t calculate_mandelbrot_float(int width, int height, int max_iterations){
             float yi = 0;
             while ((xi*xi + yi*yi) <= (4) && iteration < max_iterations) {
                 float temp = (xi*xi - yi*yi);
+                yi = (2*xi*yi)+y0;
+                xi = temp+x0;
+                iteration++;
+            }
+            checksum += iteration;
+        }
+    }
+    return checksum;
+}
+
+//TODO: Mandelbroat using variable type double
+uint64_t calculate_mandelbrot_double_task4(int width, int height, int max_iterations, int row_offset, int total_height){
+    //uint64_t mandelbrot_sum = 0;
+    //TODO: Complete the function implementation
+    checksum = 0;
+    for (int y = 0; y <= height-1; y++) {
+        int new_y = y + row_offset;
+        for (int x = 0; x <= width-1; x++) {
+            double x0 = ((double)x/(double)width)*(3.5)-2.5;
+            double y0 = ((double)new_y / (double)total_height) * 2.0 - 1.0;
+            int iteration = 0;
+            double xi = 0;
+            double yi = 0;
+            while ((xi*xi + yi*yi) <= (4) && iteration < max_iterations) {
+                double temp = (xi*xi - yi*yi);
                 yi = (2*xi*yi)+y0;
                 xi = temp+x0;
                 iteration++;

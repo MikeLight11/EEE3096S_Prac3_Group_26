@@ -61,6 +61,12 @@ uint32_t execution_time_array[5] = {0}; // Array to hold execution times for dif
 uint32_t CPU_cycles_array[5]={0};
 float CPU_time_array[5]={0};
 uint32_t throughput_array[5]={0};
+
+int size_array_task4[] = {128, 160, 192, 224, 256, 320, 384, 448, 512, 640, 768, 896, 1024, 1152, 1280, 1440, 1600, 1792, 1920};
+int hd_widths[] = {1280, 1600, 1920};
+int hd_heights[] = {720, 900, 1080};
+uint64_t checksum_array_task4[19] = {0}; // Array to hold checksums for different sizes
+uint32_t execution_time_array_task4[19] = {0}; // Array to hold execution times for different sizes
 // - Performance timing variables (e.g execution time, throughput, pixels per second, clock cycles)
 
 /* USER CODE END PV */
@@ -114,36 +120,56 @@ int main(void)
 
   /* USER CODE END 2 */
 
-  for (int i = 0; i < 5; i++) {
-            //TODO: Turn on LED 0 to signify the start of the operation
-            HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0, GPIO_PIN_SET);
+  for (int i = 0; i < 19; i++) {
+           //TODO: Turn on LED 0 to signify the start of the operation
+           HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0, GPIO_PIN_SET);
 
-            start_time = HAL_GetTick();
+           start_time = HAL_GetTick();
+           //checksum_array[i] = calculate_mandelbrot_fixed_point_arithmetic(size_array[i], size_array[i], MAX_ITER);
+           checksum_array_task4[i] = calculate_mandelbrot_fixed_point_arithmetic(size_array_task4[i],size_array_task4[i], MAX_ITER);
+           end_time = HAL_GetTick();
+           execution_time_array_task4[i] = end_time - start_time;
 
-            TIM2->CNT = 0;  // Reset counter
-            start_cycles = TIM2->CNT;
+           //TODO: Turn on LED 1 to signify the end of the operation
+           HAL_GPIO_WritePin(GPIOB, GPIO_PIN_1, GPIO_PIN_SET);
 
-            checksum_array[i] = calculate_mandelbrot_fixed_point_arithmetic(size_array[i], size_array[i], MAX_ITER);
-            //checksum_array[i] = calculate_mandelbrot_double(size_array[i], size_array[i], MAX_ITER);
-            end_time = HAL_GetTick();
-            execution_time_array[i] = end_time - start_time;
+           //TODO: Hold the LEDs on for a 1s delay
+           HAL_Delay(1000);
 
-            end_cycles = TIM2->CNT;
+           //TODO: Turn off the LEDs
+           HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0|GPIO_PIN_1, GPIO_PIN_RESET);
+       }
 
-            CPU_cycles_array[i] = end_cycles - start_cycles;
-            CPU_time_array[i] = CPU_cycles_array[i] / (48*(1e6));
+  // for (int i = 0; i < 5; i++) {
+  //           //TODO: Turn on LED 0 to signify the start of the operation
+  //           HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0, GPIO_PIN_SET);
 
-            throughput_array[i] = (size_array[i]*size_array[i]) / CPU_time_array[i];
+  //           start_time = HAL_GetTick();
 
-            //TODO: Turn on LED 1 to signify the end of the operation
-            HAL_GPIO_WritePin(GPIOB, GPIO_PIN_1, GPIO_PIN_SET);
+  //           TIM2->CNT = 0;  // Reset counter
+  //           start_cycles = TIM2->CNT;
 
-            //TODO: Hold the LEDs on for a 1s delay
-            HAL_Delay(1000);
+  //           checksum_array[i] = calculate_mandelbrot_fixed_point_arithmetic(size_array[i], size_array[i], MAX_ITER);
+  //           //checksum_array[i] = calculate_mandelbrot_double(size_array[i], size_array[i], MAX_ITER);
+  //           end_time = HAL_GetTick();
+  //           execution_time_array[i] = end_time - start_time;
 
-            //TODO: Turn off the LEDs
-            HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0|GPIO_PIN_1, GPIO_PIN_RESET);
-        }
+  //           end_cycles = TIM2->CNT;
+
+  //           CPU_cycles_array[i] = end_cycles - start_cycles;
+  //           CPU_time_array[i] = CPU_cycles_array[i] / (48*(1e6));
+
+  //           throughput_array[i] = (size_array[i]*size_array[i]) / CPU_time_array[i];
+
+  //           //TODO: Turn on LED 1 to signify the end of the operation
+  //           HAL_GPIO_WritePin(GPIOB, GPIO_PIN_1, GPIO_PIN_SET);
+
+  //           //TODO: Hold the LEDs on for a 1s delay
+  //           HAL_Delay(1000);
+
+  //           //TODO: Turn off the LEDs
+  //           HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0|GPIO_PIN_1, GPIO_PIN_RESET);
+  //       }
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
@@ -247,8 +273,8 @@ static void MX_GPIO_Init(void)
 /* USER CODE BEGIN 4 */
 //TODO: Function signatures you defined previously , implement them here
 uint64_t calculate_mandelbrot_fixed_point_arithmetic(int width, int height, int max_iterations){
-    //const int SCALE = 1000;
-    const int SCALE = 10000;
+    const int SCALE = 1000;
+    //const int SCALE = 10000;
 	//const int SCALE = 100000;
     const int THREE_FIVE = 3500;
     const int TWO = 2000;
