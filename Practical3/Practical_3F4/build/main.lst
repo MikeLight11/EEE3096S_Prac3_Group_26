@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccntOVoF.s 			page 1
+ARM GAS  C:\Users\User\AppData\Local\Temp\ccp9VHyh.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccntOVoF.s 			page 1
   29:Core/Src/main.c **** /* Private typedef -----------------------------------------------------------*/
   30:Core/Src/main.c **** /* USER CODE BEGIN PTD */
   31:Core/Src/main.c **** #define MAX_ITER 100
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccntOVoF.s 			page 2
+ARM GAS  C:\Users\User\AppData\Local\Temp\ccp9VHyh.s 			page 2
 
 
   32:Core/Src/main.c **** /* USER CODE END PTD */
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccntOVoF.s 			page 1
   86:Core/Src/main.c ****   */
   87:Core/Src/main.c **** int main(void)
   88:Core/Src/main.c **** {
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccntOVoF.s 			page 3
+ARM GAS  C:\Users\User\AppData\Local\Temp\ccp9VHyh.s 			page 3
 
 
   89:Core/Src/main.c **** 
@@ -157,8 +157,8 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccntOVoF.s 			page 1
  122:Core/Src/main.c ****           DWT->CYCCNT = 0;
  123:Core/Src/main.c ****           start_cycles = DWT->CYCCNT;
  124:Core/Src/main.c **** 
- 125:Core/Src/main.c ****           checksum_array[i] = calculate_mandelbrot_fixed_point_arithmetic(size_array[i], size_array
- 126:Core/Src/main.c ****           //checksum_array[i] = calculate_mandelbrot_double(size_array[i], size_array[i], MAX_ITER)
+ 125:Core/Src/main.c ****           //checksum_array[i] = calculate_mandelbrot_fixed_point_arithmetic(size_array[i], size_arr
+ 126:Core/Src/main.c ****           checksum_array[i] = calculate_mandelbrot_double(size_array[i], size_array[i], MAX_ITER);
  127:Core/Src/main.c ****           //checksum_array[i] = calculate_mandelbrot_float(size_array[i], size_array[i], MAX_ITER);
  128:Core/Src/main.c **** 
  129:Core/Src/main.c ****           end_time = HAL_GetTick();
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccntOVoF.s 			page 1
  143:Core/Src/main.c **** 
  144:Core/Src/main.c ****           //TODO: Turn off the LEDs
  145:Core/Src/main.c ****           HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0|GPIO_PIN_1, GPIO_PIN_RESET);
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccntOVoF.s 			page 4
+ARM GAS  C:\Users\User\AppData\Local\Temp\ccp9VHyh.s 			page 4
 
 
  146:Core/Src/main.c ****       }
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccntOVoF.s 			page 1
  200:Core/Src/main.c ****   }
  201:Core/Src/main.c **** 
  202:Core/Src/main.c ****   /** Initializes the CPU, AHB and APB buses clocks
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccntOVoF.s 			page 5
+ARM GAS  C:\Users\User\AppData\Local\Temp\ccp9VHyh.s 			page 5
 
 
  203:Core/Src/main.c ****   */
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccntOVoF.s 			page 1
   54 0012 184B     		ldr	r3, .L3
   55 0014 1A6B     		ldr	r2, [r3, #48]
   56 0016 42F00402 		orr	r2, r2, #4
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccntOVoF.s 			page 6
+ARM GAS  C:\Users\User\AppData\Local\Temp\ccp9VHyh.s 			page 6
 
 
   57 001a 1A63     		str	r2, [r3, #48]
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccntOVoF.s 			page 1
  237:Core/Src/main.c **** 
  238:Core/Src/main.c ****   /*Configure GPIO pins : PB0 PB1 PB2 PB3
  239:Core/Src/main.c ****                            PB4 PB5 PB6 PB7 */
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccntOVoF.s 			page 7
+ARM GAS  C:\Users\User\AppData\Local\Temp\ccp9VHyh.s 			page 7
 
 
  240:Core/Src/main.c ****   GPIO_InitStruct.Pin = GPIO_PIN_0|GPIO_PIN_1|GPIO_PIN_2|GPIO_PIN_3
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccntOVoF.s 			page 1
  253:Core/Src/main.c **** //TODO: Function signatures you defined previously , implement them here
  254:Core/Src/main.c **** uint64_t calculate_mandelbrot_fixed_point_arithmetic(int width, int height, int max_iterations){
  148              		.loc 1 254 96 is_stmt 1 view -0
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccntOVoF.s 			page 8
+ARM GAS  C:\Users\User\AppData\Local\Temp\ccp9VHyh.s 			page 8
 
 
  149              		.cfi_startproc
@@ -443,11 +443,11 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccntOVoF.s 			page 1
  168 0006 0646     		mov	r6, r0
  169 0008 0191     		str	r1, [sp, #4]
  170 000a 1446     		mov	r4, r2
- 255:Core/Src/main.c ****     //const int SCALE = 1000;
- 256:Core/Src/main.c **** 	//const int SCALE = 10000;
- 257:Core/Src/main.c **** 	const int SCALE = 100000;
- 171              		.loc 1 257 2 is_stmt 1 view .LVU34
+ 255:Core/Src/main.c ****     const int SCALE = 1000;
+ 171              		.loc 1 255 5 is_stmt 1 view .LVU34
  172              	.LVL3:
+ 256:Core/Src/main.c **** 	//const int SCALE = 10000;
+ 257:Core/Src/main.c **** 	//const int SCALE = 100000;
  258:Core/Src/main.c ****     const int THREE_FIVE = 3500;
  173              		.loc 1 258 5 view .LVU35
  259:Core/Src/main.c ****     const int TWO = 2000;
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccntOVoF.s 			page 1
  192              		.loc 1 265 18 is_stmt 0 view .LVU46
  193 0016 4FF00008 		mov	r8, #0
  194              		.loc 1 265 5 view .LVU47
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccntOVoF.s 			page 9
+ARM GAS  C:\Users\User\AppData\Local\Temp\ccp9VHyh.s 			page 9
 
 
  195 001a 40E0     		b	.L6
@@ -502,7 +502,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccntOVoF.s 			page 1
  205 0020 254F     		ldr	r7, .L16+4
  206 0022 87FB02BA 		smull	fp, r10, r7, r2
  207 0026 D217     		asrs	r2, r2, #31
- 208 0028 C2EB6A32 		rsb	r2, r2, r10, asr #13
+ 208 0028 C2EBAA12 		rsb	r2, r2, r10, asr #6
  209              	.LVL8:
  274:Core/Src/main.c ****                 int32_t yi_temp = ((int32_t)2 * xi * yi) / SCALE + y0;
  210              		.loc 1 274 17 is_stmt 1 view .LVU51
@@ -514,7 +514,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccntOVoF.s 			page 1
  216              	.LVL10:
  217              		.loc 1 274 58 view .LVU54
  218 0034 DB17     		asrs	r3, r3, #31
- 219 0036 C3EB2933 		rsb	r3, r3, r9, asr #12
+ 219 0036 C3EB6913 		rsb	r3, r3, r9, asr #5
  220              		.loc 1 274 25 view .LVU55
  221 003a 03EB0C01 		add	r1, r3, ip
  222              	.LVL11:
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccntOVoF.s 			page 1
  272:Core/Src/main.c ****                 int32_t xi_temp = ((int32_t)xi * xi - (int32_t)yi * yi) / SCALE + x0;
  235              		.loc 1 272 78 is_stmt 1 view .LVU62
  272:Core/Src/main.c ****                 int32_t xi_temp = ((int32_t)xi * xi - (int32_t)yi * yi) / SCALE + x0;
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccntOVoF.s 			page 10
+ARM GAS  C:\Users\User\AppData\Local\Temp\ccp9VHyh.s 			page 10
 
 
  236              		.loc 1 272 35 is_stmt 0 view .LVU63
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccntOVoF.s 			page 1
  278              		.loc 1 267 21 view .LVU77
  279 007c AEF6C41E 		subw	lr, lr, #2500
  280              	.LVL17:
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccntOVoF.s 			page 11
+ARM GAS  C:\Users\User\AppData\Local\Temp\ccp9VHyh.s 			page 11
 
 
  268:Core/Src/main.c ****             int32_t xi = 0;
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccntOVoF.s 			page 1
  319 00a6 E1E7     		b	.L11
  320              	.L15:
  321              	.LBE12:
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccntOVoF.s 			page 12
+ARM GAS  C:\Users\User\AppData\Local\Temp\ccp9VHyh.s 			page 12
 
 
  322              	.LBE7:
@@ -681,8 +681,8 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccntOVoF.s 			page 1
  335              		.align	2
  336              	.L16:
  337 00b4 00000000 		.word	checksum
- 338 00b8 89B5F814 		.word	351843721
- 339 00bc 9F0AD917 		.word	400099999
+ 338 00b8 D34D6210 		.word	274877907
+ 339 00bc E70C3D00 		.word	4000999
  340              		.cfi_endproc
  341              	.LFE162:
  343              		.global	__aeabi_i2d
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccntOVoF.s 			page 1
  371              		.cfi_offset 8, -20
  372              		.cfi_offset 9, -16
  373              		.cfi_offset 10, -12
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccntOVoF.s 			page 13
+ARM GAS  C:\Users\User\AppData\Local\Temp\ccp9VHyh.s 			page 13
 
 
  374              		.cfi_offset 11, -8
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccntOVoF.s 			page 1
  299:Core/Src/main.c ****                 yi = (2*xi*yi)+y0;
  416              		.loc 1 299 17 is_stmt 1 view .LVU109
  417              		.loc 1 299 24 is_stmt 0 view .LVU110
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccntOVoF.s 			page 14
+ARM GAS  C:\Users\User\AppData\Local\Temp\ccp9VHyh.s 			page 14
 
 
  418 0030 2246     		mov	r2, r4
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccntOVoF.s 			page 1
  467 0072 5246     		mov	r2, r10
  468 0074 5B46     		mov	r3, fp
  469 0076 5046     		mov	r0, r10
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccntOVoF.s 			page 15
+ARM GAS  C:\Users\User\AppData\Local\Temp\ccp9VHyh.s 			page 15
 
 
  470 0078 5946     		mov	r1, fp
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccntOVoF.s 			page 1
  515 00ba 0798     		ldr	r0, [sp, #28]
  516 00bc FFF7FEFF 		bl	__aeabi_i2d
  517              	.LVL43:
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccntOVoF.s 			page 16
+ARM GAS  C:\Users\User\AppData\Local\Temp\ccp9VHyh.s 			page 16
 
 
  518 00c0 0446     		mov	r4, r0
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccntOVoF.s 			page 1
  563 0106 0246     		mov	r2, r0
  564 0108 0B46     		mov	r3, r1
  293:Core/Src/main.c ****             int iteration = 0;
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccntOVoF.s 			page 17
+ARM GAS  C:\Users\User\AppData\Local\Temp\ccp9VHyh.s 			page 17
 
 
  565              		.loc 1 293 51 view .LVU141
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccntOVoF.s 			page 1
  291:Core/Src/main.c ****             double x0 = ((double)x/(double)width)*(3.5)-2.5;
  606              		.loc 1 291 18 is_stmt 0 view .LVU155
  607 013a 4FF0000A 		mov	r10, #0
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccntOVoF.s 			page 18
+ARM GAS  C:\Users\User\AppData\Local\Temp\ccp9VHyh.s 			page 18
 
 
  608 013e CDF82480 		str	r8, [sp, #36]
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccntOVoF.s 			page 1
  657              		.cfi_offset 4, -16
  658              		.cfi_offset 5, -12
  659              		.cfi_offset 6, -8
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccntOVoF.s 			page 19
+ARM GAS  C:\Users\User\AppData\Local\Temp\ccp9VHyh.s 			page 19
 
 
  660              		.cfi_offset 14, -4
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccntOVoF.s 			page 1
  701              	.LVL65:
  702              		.loc 1 322 27 view .LVU174
  703 0026 27EE877A 		vmul.f32	s14, s15, s14
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccntOVoF.s 			page 20
+ARM GAS  C:\Users\User\AppData\Local\Temp\ccp9VHyh.s 			page 20
 
 
  704              	.LVL66:
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccntOVoF.s 			page 1
  747              		.loc 1 314 40 is_stmt 1 discriminator 2 view .LVU190
  748 0062 0135     		adds	r5, r5, #1
  749              	.LVL71:
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccntOVoF.s 			page 21
+ARM GAS  C:\Users\User\AppData\Local\Temp\ccp9VHyh.s 			page 21
 
 
  750              	.L40:
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccntOVoF.s 			page 1
  791              		.loc 1 316 33 view .LVU203
  792 00ac FFF7FEFF 		bl	__aeabi_f2d
  793              	.LVL78:
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccntOVoF.s 			page 22
+ARM GAS  C:\Users\User\AppData\Local\Temp\ccp9VHyh.s 			page 22
 
 
  794 00b0 0246     		mov	r2, r0
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccntOVoF.s 			page 1
  834 00e2 19EE102A 		vmov	r2, s18	@ int
  835 00e6 9342     		cmp	r3, r2
  836 00e8 01DA     		bge	.L45
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccntOVoF.s 			page 23
+ARM GAS  C:\Users\User\AppData\Local\Temp\ccp9VHyh.s 			page 23
 
 
  837              	.LVL85:
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccntOVoF.s 			page 1
  885              		.loc 1 333 2 view .LVU223
  886              		.loc 1 333 11 is_stmt 0 view .LVU224
  887 0000 074A     		ldr	r2, .L49
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccntOVoF.s 			page 24
+ARM GAS  C:\Users\User\AppData\Local\Temp\ccp9VHyh.s 			page 24
 
 
  888 0002 D2F8FC30 		ldr	r3, [r2, #252]
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccntOVoF.s 			page 1
  930              	.LBI25:
  931              		.file 2 "Drivers/CMSIS/Include/cmsis_gcc.h"
    1:Drivers/CMSIS/Include/cmsis_gcc.h **** /**************************************************************************//**
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccntOVoF.s 			page 25
+ARM GAS  C:\Users\User\AppData\Local\Temp\ccp9VHyh.s 			page 25
 
 
    2:Drivers/CMSIS/Include/cmsis_gcc.h ****  * @file     cmsis_gcc.h
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccntOVoF.s 			page 1
   56:Drivers/CMSIS/Include/cmsis_gcc.h ****   #define __USED                                 __attribute__((used))
   57:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
   58:Drivers/CMSIS/Include/cmsis_gcc.h **** #ifndef   __WEAK
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccntOVoF.s 			page 26
+ARM GAS  C:\Users\User\AppData\Local\Temp\ccp9VHyh.s 			page 26
 
 
   59:Drivers/CMSIS/Include/cmsis_gcc.h ****   #define __WEAK                                 __attribute__((weak))
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccntOVoF.s 			page 1
  113:Drivers/CMSIS/Include/cmsis_gcc.h **** #ifndef   __RESTRICT
  114:Drivers/CMSIS/Include/cmsis_gcc.h ****   #define __RESTRICT                             __restrict
  115:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccntOVoF.s 			page 27
+ARM GAS  C:\Users\User\AppData\Local\Temp\ccp9VHyh.s 			page 27
 
 
  116:Drivers/CMSIS/Include/cmsis_gcc.h **** #ifndef   __COMPILER_BARRIER
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccntOVoF.s 			page 1
  170:Drivers/CMSIS/Include/cmsis_gcc.h **** #define __INITIAL_SP              __StackTop
  171:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
  172:Drivers/CMSIS/Include/cmsis_gcc.h **** 
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccntOVoF.s 			page 28
+ARM GAS  C:\Users\User\AppData\Local\Temp\ccp9VHyh.s 			page 28
 
 
  173:Drivers/CMSIS/Include/cmsis_gcc.h **** #ifndef __STACK_LIMIT
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccntOVoF.s 			page 1
  227:Drivers/CMSIS/Include/cmsis_gcc.h ****  */
  228:Drivers/CMSIS/Include/cmsis_gcc.h **** #define __NOP()                             __ASM volatile ("nop")
  229:Drivers/CMSIS/Include/cmsis_gcc.h **** 
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccntOVoF.s 			page 29
+ARM GAS  C:\Users\User\AppData\Local\Temp\ccp9VHyh.s 			page 29
 
 
  230:Drivers/CMSIS/Include/cmsis_gcc.h **** /**
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccntOVoF.s 			page 1
  284:Drivers/CMSIS/Include/cmsis_gcc.h **** 
  285:Drivers/CMSIS/Include/cmsis_gcc.h **** 
  286:Drivers/CMSIS/Include/cmsis_gcc.h **** /**
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccntOVoF.s 			page 30
+ARM GAS  C:\Users\User\AppData\Local\Temp\ccp9VHyh.s 			page 30
 
 
  287:Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Reverse byte order (32 bit)
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccntOVoF.s 			page 1
  341:Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Rotate Right (immediate) provides the value of the contents of a register rotated by a v
  342:Drivers/CMSIS/Include/cmsis_gcc.h ****   \param [in]    op1  Value to rotate
  343:Drivers/CMSIS/Include/cmsis_gcc.h ****   \param [in]    op2  Number of Bits to rotate
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccntOVoF.s 			page 31
+ARM GAS  C:\Users\User\AppData\Local\Temp\ccp9VHyh.s 			page 31
 
 
  344:Drivers/CMSIS/Include/cmsis_gcc.h ****   \return               Rotated value
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccntOVoF.s 			page 1
  398:Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Count leading zeros
  399:Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Counts the number of leading zeros of a data value.
  400:Drivers/CMSIS/Include/cmsis_gcc.h ****   \param [in]  value  Value to count the leading zeros
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccntOVoF.s 			page 32
+ARM GAS  C:\Users\User\AppData\Local\Temp\ccp9VHyh.s 			page 32
 
 
  401:Drivers/CMSIS/Include/cmsis_gcc.h ****   \return             number of leading zeros in value
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccntOVoF.s 			page 1
  455:Drivers/CMSIS/Include/cmsis_gcc.h **** {
  456:Drivers/CMSIS/Include/cmsis_gcc.h ****     uint32_t result;
  457:Drivers/CMSIS/Include/cmsis_gcc.h **** 
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccntOVoF.s 			page 33
+ARM GAS  C:\Users\User\AppData\Local\Temp\ccp9VHyh.s 			page 33
 
 
  458:Drivers/CMSIS/Include/cmsis_gcc.h **** #if (__GNUC__ > 4) || (__GNUC__ == 4 && __GNUC_MINOR__ >= 8)
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccntOVoF.s 			page 1
  512:Drivers/CMSIS/Include/cmsis_gcc.h ****    uint32_t result;
  513:Drivers/CMSIS/Include/cmsis_gcc.h **** 
  514:Drivers/CMSIS/Include/cmsis_gcc.h ****    __ASM volatile ("strexh %0, %2, %1" : "=&r" (result), "=Q" (*addr) : "r" ((uint32_t)value) );
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccntOVoF.s 			page 34
+ARM GAS  C:\Users\User\AppData\Local\Temp\ccp9VHyh.s 			page 34
 
 
  515:Drivers/CMSIS/Include/cmsis_gcc.h ****    return(result);
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccntOVoF.s 			page 1
  569:Drivers/CMSIS/Include/cmsis_gcc.h **** 
  570:Drivers/CMSIS/Include/cmsis_gcc.h **** /**
  571:Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Unsigned Saturate
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccntOVoF.s 			page 35
+ARM GAS  C:\Users\User\AppData\Local\Temp\ccp9VHyh.s 			page 35
 
 
  572:Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Saturates an unsigned value.
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccntOVoF.s 			page 1
  626:Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Executes a Unprivileged LDRT instruction for 16 bit values.
  627:Drivers/CMSIS/Include/cmsis_gcc.h ****   \param [in]    ptr  Pointer to data
  628:Drivers/CMSIS/Include/cmsis_gcc.h ****   \return        value of type uint16_t at (*ptr)
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccntOVoF.s 			page 36
+ARM GAS  C:\Users\User\AppData\Local\Temp\ccp9VHyh.s 			page 36
 
 
  629:Drivers/CMSIS/Include/cmsis_gcc.h ****  */
@@ -2158,7 +2158,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccntOVoF.s 			page 1
  683:Drivers/CMSIS/Include/cmsis_gcc.h **** 
  684:Drivers/CMSIS/Include/cmsis_gcc.h **** 
  685:Drivers/CMSIS/Include/cmsis_gcc.h **** /**
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccntOVoF.s 			page 37
+ARM GAS  C:\Users\User\AppData\Local\Temp\ccp9VHyh.s 			page 37
 
 
  686:Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   STRT Unprivileged (32 bit)
@@ -2218,7 +2218,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccntOVoF.s 			page 1
  740:Drivers/CMSIS/Include/cmsis_gcc.h ****     }
  741:Drivers/CMSIS/Include/cmsis_gcc.h ****     else if (val < 0)
  742:Drivers/CMSIS/Include/cmsis_gcc.h ****     {
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccntOVoF.s 			page 38
+ARM GAS  C:\Users\User\AppData\Local\Temp\ccp9VHyh.s 			page 38
 
 
  743:Drivers/CMSIS/Include/cmsis_gcc.h ****       return 0U;
@@ -2278,7 +2278,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccntOVoF.s 			page 1
  797:Drivers/CMSIS/Include/cmsis_gcc.h ****    return(result);
  798:Drivers/CMSIS/Include/cmsis_gcc.h **** }
  799:Drivers/CMSIS/Include/cmsis_gcc.h **** 
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccntOVoF.s 			page 39
+ARM GAS  C:\Users\User\AppData\Local\Temp\ccp9VHyh.s 			page 39
 
 
  800:Drivers/CMSIS/Include/cmsis_gcc.h **** 
@@ -2338,7 +2338,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccntOVoF.s 			page 1
  854:Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Executes a LDAH exclusive instruction for 16 bit values.
  855:Drivers/CMSIS/Include/cmsis_gcc.h ****   \param [in]    ptr  Pointer to data
  856:Drivers/CMSIS/Include/cmsis_gcc.h ****   \return        value of type uint16_t at (*ptr)
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccntOVoF.s 			page 40
+ARM GAS  C:\Users\User\AppData\Local\Temp\ccp9VHyh.s 			page 40
 
 
  857:Drivers/CMSIS/Include/cmsis_gcc.h ****  */
@@ -2398,7 +2398,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccntOVoF.s 			page 1
  911:Drivers/CMSIS/Include/cmsis_gcc.h ****    __ASM volatile ("stlexh %0, %2, %1" : "=&r" (result), "=Q" (*ptr) : "r" ((uint32_t)value) : "mem
  912:Drivers/CMSIS/Include/cmsis_gcc.h ****    return(result);
  913:Drivers/CMSIS/Include/cmsis_gcc.h **** }
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccntOVoF.s 			page 41
+ARM GAS  C:\Users\User\AppData\Local\Temp\ccp9VHyh.s 			page 41
 
 
  914:Drivers/CMSIS/Include/cmsis_gcc.h **** 
@@ -2458,7 +2458,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccntOVoF.s 			page 1
  937 0000 72B6     		cpsid i
  938              	@ 0 "" 2
  939              		.thumb
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccntOVoF.s 			page 42
+ARM GAS  C:\Users\User\AppData\Local\Temp\ccp9VHyh.s 			page 42
 
 
  940              		.syntax unified
@@ -2518,7 +2518,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccntOVoF.s 			page 1
  986              		.loc 1 182 3 is_stmt 1 view .LVU244
  987              	.LBB27:
  182:Core/Src/main.c ****   __HAL_PWR_VOLTAGESCALING_CONFIG(PWR_REGULATOR_VOLTAGE_SCALE3);
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccntOVoF.s 			page 43
+ARM GAS  C:\Users\User\AppData\Local\Temp\ccp9VHyh.s 			page 43
 
 
  988              		.loc 1 182 3 view .LVU245
@@ -2578,7 +2578,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccntOVoF.s 			page 1
  1028 0052 0893     		str	r3, [sp, #32]
  190:Core/Src/main.c ****   RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSE;
  1029              		.loc 1 190 3 is_stmt 1 view .LVU260
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccntOVoF.s 			page 44
+ARM GAS  C:\Users\User\AppData\Local\Temp\ccp9VHyh.s 			page 44
 
 
  190:Core/Src/main.c ****   RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSE;
@@ -2638,7 +2638,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccntOVoF.s 			page 1
  1065              		.loc 1 206 3 is_stmt 1 view .LVU279
  206:Core/Src/main.c ****   RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
  1066              		.loc 1 206 34 is_stmt 0 view .LVU280
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccntOVoF.s 			page 45
+ARM GAS  C:\Users\User\AppData\Local\Temp\ccp9VHyh.s 			page 45
 
 
  1067 0078 0223     		movs	r3, #2
@@ -2698,7 +2698,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccntOVoF.s 			page 1
  1109 00a4 00380240 		.word	1073887232
  1110 00a8 00700040 		.word	1073770496
  1111              		.cfi_endproc
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccntOVoF.s 			page 46
+ARM GAS  C:\Users\User\AppData\Local\Temp\ccp9VHyh.s 			page 46
 
 
  1112              	.LFE160:
@@ -2758,7 +2758,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccntOVoF.s 			page 1
  1159              	.L63:
  118:Core/Src/main.c **** 
  1160              		.loc 1 118 11 is_stmt 1 view .LVU302
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccntOVoF.s 			page 47
+ARM GAS  C:\Users\User\AppData\Local\Temp\ccp9VHyh.s 			page 47
 
 
  1161 0018 354D     		ldr	r5, .L66+8
@@ -2793,18 +2793,18 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccntOVoF.s 			page 1
  1182              		.loc 1 123 24 view .LVU310
  1183 0038 DFF8DC90 		ldr	r9, .L66+48
  1184 003c C9F80030 		str	r3, [r9]
- 125:Core/Src/main.c ****           //checksum_array[i] = calculate_mandelbrot_double(size_array[i], size_array[i], MAX_ITER)
- 1185              		.loc 1 125 11 is_stmt 1 view .LVU311
- 125:Core/Src/main.c ****           //checksum_array[i] = calculate_mandelbrot_double(size_array[i], size_array[i], MAX_ITER)
- 1186              		.loc 1 125 31 is_stmt 0 view .LVU312
+ 126:Core/Src/main.c ****           //checksum_array[i] = calculate_mandelbrot_float(size_array[i], size_array[i], MAX_ITER);
+ 1185              		.loc 1 126 11 is_stmt 1 view .LVU311
+ 126:Core/Src/main.c ****           //checksum_array[i] = calculate_mandelbrot_float(size_array[i], size_array[i], MAX_ITER);
+ 1186              		.loc 1 126 31 is_stmt 0 view .LVU312
  1187 0040 DFF8D880 		ldr	r8, .L66+52
  1188 0044 58F82400 		ldr	r0, [r8, r4, lsl #2]
  1189 0048 6422     		movs	r2, #100
  1190 004a 0146     		mov	r1, r0
- 1191 004c FFF7FEFF 		bl	calculate_mandelbrot_fixed_point_arithmetic
+ 1191 004c FFF7FEFF 		bl	calculate_mandelbrot_double
  1192              	.LVL99:
- 125:Core/Src/main.c ****           //checksum_array[i] = calculate_mandelbrot_double(size_array[i], size_array[i], MAX_ITER)
- 1193              		.loc 1 125 29 discriminator 1 view .LVU313
+ 126:Core/Src/main.c ****           //checksum_array[i] = calculate_mandelbrot_float(size_array[i], size_array[i], MAX_ITER);
+ 1193              		.loc 1 126 29 discriminator 1 view .LVU313
  1194 0050 294B     		ldr	r3, .L66+16
  1195 0052 03EBC403 		add	r3, r3, r4, lsl #3
  1196 0056 C3E90001 		strd	r0, [r3]
@@ -2818,7 +2818,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccntOVoF.s 			page 1
  1201              		.loc 1 129 20 discriminator 1 view .LVU316
  1202 005e 274B     		ldr	r3, .L66+20
  1203 0060 1860     		str	r0, [r3]
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccntOVoF.s 			page 48
+ARM GAS  C:\Users\User\AppData\Local\Temp\ccp9VHyh.s 			page 48
 
 
  130:Core/Src/main.c **** 
@@ -2878,7 +2878,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccntOVoF.s 			page 1
  1243 00a2 03FB03F3 		mul	r3, r3, r3
  136:Core/Src/main.c **** 
  1244              		.loc 1 136 63 view .LVU332
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccntOVoF.s 			page 49
+ARM GAS  C:\Users\User\AppData\Local\Temp\ccp9VHyh.s 			page 49
 
 
  1245 00a6 07EE903A 		vmov	s15, r3	@ int
@@ -2938,7 +2938,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccntOVoF.s 			page 1
  1290 00fc 00000000 		.word	end_time
  1291 0100 00000000 		.word	execution_time_array
  1292 0104 00000000 		.word	end_cycles
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccntOVoF.s 			page 50
+ARM GAS  C:\Users\User\AppData\Local\Temp\ccp9VHyh.s 			page 50
 
 
  1293 0108 00000000 		.word	CPU_cycles_array
@@ -2998,7 +2998,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccntOVoF.s 			page 1
  1338              		.section	.data.size_array,"aw"
  1339              		.align	2
  1342              	size_array:
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccntOVoF.s 			page 51
+ARM GAS  C:\Users\User\AppData\Local\Temp\ccp9VHyh.s 			page 51
 
 
  1343 0000 80000000 		.word	128
@@ -3058,7 +3058,7 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccntOVoF.s 			page 1
  1416              	start_time:
  1417 0000 00000000 		.space	4
  1418              		.text
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccntOVoF.s 			page 52
+ARM GAS  C:\Users\User\AppData\Local\Temp\ccp9VHyh.s 			page 52
 
 
  1419              	.Letext0:
@@ -3072,67 +3072,67 @@ ARM GAS  C:\Users\User\AppData\Local\Temp\ccntOVoF.s 			page 1
  1427              		.file 10 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h"
  1428              		.file 11 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h"
  1429              		.file 12 "<built-in>"
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccntOVoF.s 			page 53
+ARM GAS  C:\Users\User\AppData\Local\Temp\ccp9VHyh.s 			page 53
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 main.c
-C:\Users\User\AppData\Local\Temp\ccntOVoF.s:21     .text.MX_GPIO_Init:00000000 $t
-C:\Users\User\AppData\Local\Temp\ccntOVoF.s:26     .text.MX_GPIO_Init:00000000 MX_GPIO_Init
-C:\Users\User\AppData\Local\Temp\ccntOVoF.s:133    .text.MX_GPIO_Init:00000074 $d
-C:\Users\User\AppData\Local\Temp\ccntOVoF.s:139    .text.calculate_mandelbrot_fixed_point_arithmetic:00000000 $t
-C:\Users\User\AppData\Local\Temp\ccntOVoF.s:145    .text.calculate_mandelbrot_fixed_point_arithmetic:00000000 calculate_mandelbrot_fixed_point_arithmetic
-C:\Users\User\AppData\Local\Temp\ccntOVoF.s:337    .text.calculate_mandelbrot_fixed_point_arithmetic:000000b4 $d
-C:\Users\User\AppData\Local\Temp\ccntOVoF.s:1395   .bss.checksum:00000000 checksum
-C:\Users\User\AppData\Local\Temp\ccntOVoF.s:350    .text.calculate_mandelbrot_double:00000000 $t
-C:\Users\User\AppData\Local\Temp\ccntOVoF.s:356    .text.calculate_mandelbrot_double:00000000 calculate_mandelbrot_double
-C:\Users\User\AppData\Local\Temp\ccntOVoF.s:629    .text.calculate_mandelbrot_double:00000154 $d
-C:\Users\User\AppData\Local\Temp\ccntOVoF.s:640    .text.calculate_mandelbrot_float:00000000 $t
-C:\Users\User\AppData\Local\Temp\ccntOVoF.s:646    .text.calculate_mandelbrot_float:00000000 calculate_mandelbrot_float
-C:\Users\User\AppData\Local\Temp\ccntOVoF.s:862    .text.calculate_mandelbrot_float:000000fc $d
-C:\Users\User\AppData\Local\Temp\ccntOVoF.s:872    .text.DWT_Init:00000000 $t
-C:\Users\User\AppData\Local\Temp\ccntOVoF.s:878    .text.DWT_Init:00000000 DWT_Init
-C:\Users\User\AppData\Local\Temp\ccntOVoF.s:908    .text.DWT_Init:00000020 $d
-C:\Users\User\AppData\Local\Temp\ccntOVoF.s:914    .text.Error_Handler:00000000 $t
-C:\Users\User\AppData\Local\Temp\ccntOVoF.s:920    .text.Error_Handler:00000000 Error_Handler
-C:\Users\User\AppData\Local\Temp\ccntOVoF.s:952    .text.SystemClock_Config:00000000 $t
-C:\Users\User\AppData\Local\Temp\ccntOVoF.s:958    .text.SystemClock_Config:00000000 SystemClock_Config
-C:\Users\User\AppData\Local\Temp\ccntOVoF.s:1109   .text.SystemClock_Config:000000a4 $d
-C:\Users\User\AppData\Local\Temp\ccntOVoF.s:1116   .text.main:00000000 $t
-C:\Users\User\AppData\Local\Temp\ccntOVoF.s:1122   .text.main:00000000 main
-C:\Users\User\AppData\Local\Temp\ccntOVoF.s:1285   .text.main:000000e8 $d
-C:\Users\User\AppData\Local\Temp\ccntOVoF.s:1335   .bss.checksum_array:00000000 checksum_array
-C:\Users\User\AppData\Local\Temp\ccntOVoF.s:1409   .bss.end_time:00000000 end_time
-C:\Users\User\AppData\Local\Temp\ccntOVoF.s:1328   .bss.execution_time_array:00000000 execution_time_array
-C:\Users\User\AppData\Local\Temp\ccntOVoF.s:1381   .bss.end_cycles:00000000 end_cycles
-C:\Users\User\AppData\Local\Temp\ccntOVoF.s:1321   .bss.CPU_cycles_array:00000000 CPU_cycles_array
-C:\Users\User\AppData\Local\Temp\ccntOVoF.s:1314   .bss.CPU_time_array:00000000 CPU_time_array
-C:\Users\User\AppData\Local\Temp\ccntOVoF.s:1307   .bss.throughput_array:00000000 throughput_array
-C:\Users\User\AppData\Local\Temp\ccntOVoF.s:1416   .bss.start_time:00000000 start_time
-C:\Users\User\AppData\Local\Temp\ccntOVoF.s:1388   .bss.start_cycles:00000000 start_cycles
-C:\Users\User\AppData\Local\Temp\ccntOVoF.s:1342   .data.size_array:00000000 size_array
-C:\Users\User\AppData\Local\Temp\ccntOVoF.s:1304   .bss.throughput_array:00000000 $d
-C:\Users\User\AppData\Local\Temp\ccntOVoF.s:1311   .bss.CPU_time_array:00000000 $d
-C:\Users\User\AppData\Local\Temp\ccntOVoF.s:1318   .bss.CPU_cycles_array:00000000 $d
-C:\Users\User\AppData\Local\Temp\ccntOVoF.s:1325   .bss.execution_time_array:00000000 $d
-C:\Users\User\AppData\Local\Temp\ccntOVoF.s:1332   .bss.checksum_array:00000000 $d
-C:\Users\User\AppData\Local\Temp\ccntOVoF.s:1339   .data.size_array:00000000 $d
-C:\Users\User\AppData\Local\Temp\ccntOVoF.s:1353   .data.init_height:00000000 init_height
-C:\Users\User\AppData\Local\Temp\ccntOVoF.s:1350   .data.init_height:00000000 $d
-C:\Users\User\AppData\Local\Temp\ccntOVoF.s:1360   .data.init_width:00000000 init_width
-C:\Users\User\AppData\Local\Temp\ccntOVoF.s:1357   .data.init_width:00000000 $d
-C:\Users\User\AppData\Local\Temp\ccntOVoF.s:1367   .bss.throughput:00000000 throughput
-C:\Users\User\AppData\Local\Temp\ccntOVoF.s:1364   .bss.throughput:00000000 $d
-C:\Users\User\AppData\Local\Temp\ccntOVoF.s:1374   .bss.CPU_cycles:00000000 CPU_cycles
-C:\Users\User\AppData\Local\Temp\ccntOVoF.s:1371   .bss.CPU_cycles:00000000 $d
-C:\Users\User\AppData\Local\Temp\ccntOVoF.s:1378   .bss.end_cycles:00000000 $d
-C:\Users\User\AppData\Local\Temp\ccntOVoF.s:1385   .bss.start_cycles:00000000 $d
-C:\Users\User\AppData\Local\Temp\ccntOVoF.s:1392   .bss.checksum:00000000 $d
-C:\Users\User\AppData\Local\Temp\ccntOVoF.s:1402   .bss.execution_time:00000000 execution_time
-C:\Users\User\AppData\Local\Temp\ccntOVoF.s:1399   .bss.execution_time:00000000 $d
-C:\Users\User\AppData\Local\Temp\ccntOVoF.s:1406   .bss.end_time:00000000 $d
-C:\Users\User\AppData\Local\Temp\ccntOVoF.s:1413   .bss.start_time:00000000 $d
-ARM GAS  C:\Users\User\AppData\Local\Temp\ccntOVoF.s 			page 54
+C:\Users\User\AppData\Local\Temp\ccp9VHyh.s:21     .text.MX_GPIO_Init:00000000 $t
+C:\Users\User\AppData\Local\Temp\ccp9VHyh.s:26     .text.MX_GPIO_Init:00000000 MX_GPIO_Init
+C:\Users\User\AppData\Local\Temp\ccp9VHyh.s:133    .text.MX_GPIO_Init:00000074 $d
+C:\Users\User\AppData\Local\Temp\ccp9VHyh.s:139    .text.calculate_mandelbrot_fixed_point_arithmetic:00000000 $t
+C:\Users\User\AppData\Local\Temp\ccp9VHyh.s:145    .text.calculate_mandelbrot_fixed_point_arithmetic:00000000 calculate_mandelbrot_fixed_point_arithmetic
+C:\Users\User\AppData\Local\Temp\ccp9VHyh.s:337    .text.calculate_mandelbrot_fixed_point_arithmetic:000000b4 $d
+C:\Users\User\AppData\Local\Temp\ccp9VHyh.s:1395   .bss.checksum:00000000 checksum
+C:\Users\User\AppData\Local\Temp\ccp9VHyh.s:350    .text.calculate_mandelbrot_double:00000000 $t
+C:\Users\User\AppData\Local\Temp\ccp9VHyh.s:356    .text.calculate_mandelbrot_double:00000000 calculate_mandelbrot_double
+C:\Users\User\AppData\Local\Temp\ccp9VHyh.s:629    .text.calculate_mandelbrot_double:00000154 $d
+C:\Users\User\AppData\Local\Temp\ccp9VHyh.s:640    .text.calculate_mandelbrot_float:00000000 $t
+C:\Users\User\AppData\Local\Temp\ccp9VHyh.s:646    .text.calculate_mandelbrot_float:00000000 calculate_mandelbrot_float
+C:\Users\User\AppData\Local\Temp\ccp9VHyh.s:862    .text.calculate_mandelbrot_float:000000fc $d
+C:\Users\User\AppData\Local\Temp\ccp9VHyh.s:872    .text.DWT_Init:00000000 $t
+C:\Users\User\AppData\Local\Temp\ccp9VHyh.s:878    .text.DWT_Init:00000000 DWT_Init
+C:\Users\User\AppData\Local\Temp\ccp9VHyh.s:908    .text.DWT_Init:00000020 $d
+C:\Users\User\AppData\Local\Temp\ccp9VHyh.s:914    .text.Error_Handler:00000000 $t
+C:\Users\User\AppData\Local\Temp\ccp9VHyh.s:920    .text.Error_Handler:00000000 Error_Handler
+C:\Users\User\AppData\Local\Temp\ccp9VHyh.s:952    .text.SystemClock_Config:00000000 $t
+C:\Users\User\AppData\Local\Temp\ccp9VHyh.s:958    .text.SystemClock_Config:00000000 SystemClock_Config
+C:\Users\User\AppData\Local\Temp\ccp9VHyh.s:1109   .text.SystemClock_Config:000000a4 $d
+C:\Users\User\AppData\Local\Temp\ccp9VHyh.s:1116   .text.main:00000000 $t
+C:\Users\User\AppData\Local\Temp\ccp9VHyh.s:1122   .text.main:00000000 main
+C:\Users\User\AppData\Local\Temp\ccp9VHyh.s:1285   .text.main:000000e8 $d
+C:\Users\User\AppData\Local\Temp\ccp9VHyh.s:1335   .bss.checksum_array:00000000 checksum_array
+C:\Users\User\AppData\Local\Temp\ccp9VHyh.s:1409   .bss.end_time:00000000 end_time
+C:\Users\User\AppData\Local\Temp\ccp9VHyh.s:1328   .bss.execution_time_array:00000000 execution_time_array
+C:\Users\User\AppData\Local\Temp\ccp9VHyh.s:1381   .bss.end_cycles:00000000 end_cycles
+C:\Users\User\AppData\Local\Temp\ccp9VHyh.s:1321   .bss.CPU_cycles_array:00000000 CPU_cycles_array
+C:\Users\User\AppData\Local\Temp\ccp9VHyh.s:1314   .bss.CPU_time_array:00000000 CPU_time_array
+C:\Users\User\AppData\Local\Temp\ccp9VHyh.s:1307   .bss.throughput_array:00000000 throughput_array
+C:\Users\User\AppData\Local\Temp\ccp9VHyh.s:1416   .bss.start_time:00000000 start_time
+C:\Users\User\AppData\Local\Temp\ccp9VHyh.s:1388   .bss.start_cycles:00000000 start_cycles
+C:\Users\User\AppData\Local\Temp\ccp9VHyh.s:1342   .data.size_array:00000000 size_array
+C:\Users\User\AppData\Local\Temp\ccp9VHyh.s:1304   .bss.throughput_array:00000000 $d
+C:\Users\User\AppData\Local\Temp\ccp9VHyh.s:1311   .bss.CPU_time_array:00000000 $d
+C:\Users\User\AppData\Local\Temp\ccp9VHyh.s:1318   .bss.CPU_cycles_array:00000000 $d
+C:\Users\User\AppData\Local\Temp\ccp9VHyh.s:1325   .bss.execution_time_array:00000000 $d
+C:\Users\User\AppData\Local\Temp\ccp9VHyh.s:1332   .bss.checksum_array:00000000 $d
+C:\Users\User\AppData\Local\Temp\ccp9VHyh.s:1339   .data.size_array:00000000 $d
+C:\Users\User\AppData\Local\Temp\ccp9VHyh.s:1353   .data.init_height:00000000 init_height
+C:\Users\User\AppData\Local\Temp\ccp9VHyh.s:1350   .data.init_height:00000000 $d
+C:\Users\User\AppData\Local\Temp\ccp9VHyh.s:1360   .data.init_width:00000000 init_width
+C:\Users\User\AppData\Local\Temp\ccp9VHyh.s:1357   .data.init_width:00000000 $d
+C:\Users\User\AppData\Local\Temp\ccp9VHyh.s:1367   .bss.throughput:00000000 throughput
+C:\Users\User\AppData\Local\Temp\ccp9VHyh.s:1364   .bss.throughput:00000000 $d
+C:\Users\User\AppData\Local\Temp\ccp9VHyh.s:1374   .bss.CPU_cycles:00000000 CPU_cycles
+C:\Users\User\AppData\Local\Temp\ccp9VHyh.s:1371   .bss.CPU_cycles:00000000 $d
+C:\Users\User\AppData\Local\Temp\ccp9VHyh.s:1378   .bss.end_cycles:00000000 $d
+C:\Users\User\AppData\Local\Temp\ccp9VHyh.s:1385   .bss.start_cycles:00000000 $d
+C:\Users\User\AppData\Local\Temp\ccp9VHyh.s:1392   .bss.checksum:00000000 $d
+C:\Users\User\AppData\Local\Temp\ccp9VHyh.s:1402   .bss.execution_time:00000000 execution_time
+C:\Users\User\AppData\Local\Temp\ccp9VHyh.s:1399   .bss.execution_time:00000000 $d
+C:\Users\User\AppData\Local\Temp\ccp9VHyh.s:1406   .bss.end_time:00000000 $d
+C:\Users\User\AppData\Local\Temp\ccp9VHyh.s:1413   .bss.start_time:00000000 $d
+ARM GAS  C:\Users\User\AppData\Local\Temp\ccp9VHyh.s 			page 54
 
 
 

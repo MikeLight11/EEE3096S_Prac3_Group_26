@@ -31,7 +31,6 @@ OPT = -Og
 #OPT = -O0
 
 
-
 #######################################
 # paths
 #######################################
@@ -102,10 +101,12 @@ CPU = -mcpu=cortex-m4
 
 #TODO: FPU Enbale/Disable
 # fpu
-FPU = -mfpu=fpv4-sp-d16
+#FPU =                           # FPU DISABLED
+FPU = -mfpu=fpv4-sp-d16          # FPU ENABLED
 
 # float-abi
-FLOAT-ABI = -mfloat-abi=hard
+#FLOAT-ABI = -mfloat-abi=soft    # FPU DISABLED
+FLOAT-ABI = -mfloat-abi=hard     # FPU ENABLED
 
 # mcu
 MCU = $(CPU) -mthumb $(FPU) $(FLOAT-ABI)
